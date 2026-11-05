@@ -39,7 +39,7 @@ public class LevelManager : MonoBehaviour
         Physics2D.SyncTransforms();
         foreach(Goal goal in goals)
         {
-            if(Physics2D.OverlapPoint(goal.transform.position,goal.boxesLayer)==null)
+            if(!goal.IsFilled)
             return;
         }
         completed = true;
